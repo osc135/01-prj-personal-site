@@ -32,6 +32,7 @@ section {
 #bio p {
   font-size: 18px; /* Larger text for bio */
   line-height: 1.5; /* Space between lines */
+
 }
 
 /* Projects section */
@@ -45,8 +46,15 @@ section {
 
 /* Languages section */
 #languages ul {
-  list-style-type: disc; /* Bullet points */
-  padding-left: 20px; /* Indent the list */
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Make it a flex container */
+  flex-direction: row; /* Arrange items in a row */
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+#languages li {
+  margin: 0 15px; /* Add space between items */
 }
 
 /* Contact section */
