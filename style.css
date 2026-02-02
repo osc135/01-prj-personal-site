@@ -59,10 +59,19 @@ section h2 {
   background-color: #e8f5e9; /* Light green */
 }
 
+#projects h2 {
+  border: 3px dotted #333; /* Dotted border around heading */
+  padding: 20px; /* Space inside the box */
+  border-radius: 8px; /* Slightly rounded corners for the box */
+}
+
 #projects p {
   font-size: 16px; /* Standard text size */
   line-height: 1.6; /* Space between lines */
   max-width: 600px; /* Limit width for readability */
+  border: 3px dotted #333; /* Dotted border around content */
+  padding: 20px; /* Space inside the box */
+  border-radius: 8px; /* Slightly rounded corners for the box */
 }
 
 /* Languages section - light orange background */
