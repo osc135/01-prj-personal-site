@@ -18,62 +18,124 @@ header {
 
 header h1 {
   margin: 0; /* Remove default margin */
+  font-size: 36px; /* Large, bold header */
+  font-weight: bold; /* Make it bold */
 }
 
-/* Section styles */
+/* Section styles - each section is its own flex box */
 section {
-  margin: 20px; /* Space around sections */
-  padding: 20px; /* Space inside sections */
+  display: flex; /* Make each section a flex container */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center all text */
+  margin: 0; /* No margin to blend sections together */
+  padding: 40px 20px; /* Space inside sections */
   background-color: white; /* White background for sections */
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 0; /* No rounded corners to blend smoothly */
+  border: none; /* No borders to blend sections */
 }
 
-/* Bio section specific */
+/* Section headings - bold and centered */
+section h2 {
+  margin: 0 0 20px 0; /* Space below heading */
+  font-size: 28px; /* Large heading */
+  font-weight: bold; /* Make it bold */
+}
+
+/* Bio section - light blue background */
+#bio {
+  background-color: #e3f2fd; /* Light blue */
+}
+
 #bio p {
-  font-size: 18px; /* Larger text for bio */
-  line-height: 1.5; /* Space between lines */
-
+  font-size: 16px; /* Standard text size */
+  line-height: 1.6; /* Space between lines */
+  max-width: 600px; /* Limit width for readability */
 }
 
-/* Projects section */
-.project {
-  margin-bottom: 20px; /* Space between projects */
+/* Projects section - light green background */
+#projects {
+  background-color: #e8f5e9; /* Light green */
 }
 
-.project h3 {
-  color: #333; /* Dark text for headings */
+#projects p {
+  font-size: 16px; /* Standard text size */
+  line-height: 1.6; /* Space between lines */
+  max-width: 600px; /* Limit width for readability */
 }
 
-/* Languages section */
+/* Languages section - light orange background */
+#languages {
+  background-color: #fff3e0; /* Light orange */
+}
+
 #languages ul {
   list-style: none; /* Remove bullet points */
   display: flex; /* Make it a flex container */
   flex-direction: row; /* Arrange items in a row */
+  flex-wrap: wrap; /* Wrap items if needed */
   justify-content: center; /* Center the items horizontally */
   align-items: center; /* Center items vertically */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
 #languages li {
-  margin: 0 15px; /* Add space between items */
+  display: flex; /* Make each item a flex container */
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: center; /* Center icon and text horizontally */
+  margin: 15px 20px; /* Add space between items */
 }
 
-/* Contact section */
-#contact a {
-  color: #007bff; /* Blue color for links */
+#languages i {
+  font-size: 32px; /* Large icons */
+  margin-bottom: 8px; /* Space between icon and text */
+}
+
+#languages span {
+  font-size: 14px; /* Text below icon */
+}
+
+/* Contact section - light pink background */
+#contact {
+  background-color: #fce4ec; /* Light pink */
+}
+
+.contact-links {
+  display: flex; /* Make it a flex container */
+  justify-content: center; /* Center links horizontally */
+  align-items: center; /* Center links vertically */
+  gap: 30px; /* Space between links */
+}
+
+.contact-link {
+  font-size: 48px; /* Large icon size */
+  color: #333; /* Dark color for links */
   text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
-#contact a:hover {
-  text-decoration: underline; /* Underline on hover */
+.contact-link:hover {
+  color: #007bff; /* Blue on hover */
 }
 
 /* Footer styles */
 footer {
-  background-color: #333; /* Dark background */
-  color: white; /* White text */
-  text-align: center; /* Center the text */
-  padding: 10px; /* Space around */
-  position: fixed; /* Stick to bottom */
-  width: 100%; /* Full width */
-  bottom: 0; /* At the bottom */
+  display: flex; /* Make footer a flex container */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  background-color: #f3e5f5; /* Light purple to blend with sections */
+  color: #333; /* Dark text */
+  padding: 40px 20px; /* Space inside footer */
+  margin: 0; /* No margin to blend with sections */
+  border-radius: 0; /* No rounded corners */
+  border: none; /* No borders */
+}
+
+footer p {
+  margin: 0; /* Remove default paragraph margin */
+  font-size: 14px; /* Smaller text for footer */
 }
