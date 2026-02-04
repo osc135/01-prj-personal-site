@@ -4,25 +4,31 @@
   <meta charset="UTF-8">
   <title>My Personal Site</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-  <!-- Header section kept visually separate from content -->
+  <!-- Header with navigation -->
   <header class="site-header">
-    <div class="container">
-      <h1>My Personal Website</h1>
+    <div class="container header-content">
+      <h1 class="logo">Olivia</h1>
+      <nav class="nav">
+        <a href="#bio" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#languages" class="nav-link">Languages</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
     </div>
   </header>
 
   <!-- Main content: each section is a centered card/bubble -->
   <main class="content">
-    <section id="bio" class="card card-ombre">
+    <section id="bio" class="card">
       <h2>About Me</h2>
       <p>Hello! My name is Olivia Campbell. I am a student at the University of Utah in majoring in Computer Science. I am trying to learn to utilize AI in my work, while still creating amazing projects.</p>
     </section>
 
-    <section id="projects" class="card card-ombre-2">
+    <section id="projects" class="card">
       <h2>My Projects</h2>
       <p>This section is a work in progress. Check back later for my awesome projects!</p>
     </section>
@@ -39,7 +45,7 @@
           <span class="label">CSS</span>
         </li>
         <li class="lang-item">
-          <i class="fab fa-js-square" aria-hidden="true"></i>
+          <i class="fab fa-square-js" aria-hidden="true"></i>
           <span class="label">JavaScript</span>
         </li>
         <li class="lang-item">
@@ -47,15 +53,9 @@
           <span class="label">Python</span>
         </li>
         <li class="lang-item">
-          <i class="fab fa-csharp" aria-hidden="true"></i>
           <span class="label">C#</span>
         </li>
         <li class="lang-item">
-          <i class="fab fa-java" aria-hidden="true"></i>
-          <span class="label">Java</span>
-        </li>
-        <li class="lang-item">
-          <!-- No icon for C++; we intentionally omit a filler icon -->
           <span class="label">C++</span>
         </li>
       </ul>

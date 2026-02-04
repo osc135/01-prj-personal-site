@@ -1,171 +1,271 @@
-/* Modernized styles for the website */
+/* Modern minimal design */
 
-/* Body: subtle neutral background to make cards pop */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(180deg, #eef6f8 0%, #f6fbfa 100%);
-  color: #1f2933;
+* {
+  box-sizing: border-box;
 }
 
-/* Container helper to keep content centered */
+/* Body: soft, clean background */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* Container helper for centering and max-width */
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Header: visually separate from main content */
+/* Header with navigation */
 .site-header {
   background: white;
-  box-shadow: 0 6px 18px rgba(16,24,40,0.08);
-  padding: 28px 0;
+  border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.site-header h1 {
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
   margin: 0;
-  font-size: 28px;
-  letter-spacing: 0.4px;
+  color: #1f2937;
+  letter-spacing: -0.5px;
 }
 
-/* Main content: sections appear as floating "bubbles" (cards) */
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 200ms ease;
+}
+
+.nav-link:hover {
+  color: #10b981;
+}
+
+
+/* Main content area */
 .content {
-  padding: 40px 0 80px 0;
+  padding: 60px 0;
 }
 
+/* Card styles: clean white with subtle shadow */
 .card {
-  max-width: 900px; /* Do not span full viewport */
-  margin: 36px auto; /* Center the card and add vertical spacing */
-  padding: 32px;
-  border-radius: 14px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
   background: white;
-  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  transition: box-shadow 200ms ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .card h2 {
-  margin: 0 0 16px 0;
-  font-size: 24px;
-}
-
-.card p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #24303a;
-}
-
-/* Ombre blue-green styles for selected cards */
-.card-ombre {
-  background: linear-gradient(135deg, #e6f8ff 0%, #dffdf6 100%);
-}
-
-.card-ombre-2 {
-  background: linear-gradient(135deg, #d9f1ff 0%, #c7f7e9 100%);
-}
-
-/* Projects decorative style (keeps the dotted boxes but inside a card) */
-#projects h2,
-#projects p {
-  display: inline-block;
-  /* border: 2px dotted rgba(16,24,40,0.12); */
-  padding: 14px;
-  border-radius: 8px;
-}
-
-/* Languages: grid-like pill items with hover pop-out */
-.languages-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-  padding: 18px 8px 0 8px;
-  margin: 0;
-}
-
-.lang-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255,255,255,0.9);
-  padding: 10px 16px;
-  border-radius: 999px; /* pill */
-  box-shadow: 0 6px 18px rgba(16,24,40,0.04);
-  transition: transform 220ms cubic-bezier(.2,.9,.3,1), box-shadow 220ms ease;
-  font-weight: 600;
-}
-
-.lang-item i {
-  font-size: 20px;
-  display: inline-block;
-  width: 22px;
+  margin: 0 0 20px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
   text-align: center;
 }
 
-/* If an <i> exists but is empty, hide it so we don't show a filler */
-.lang-item i:empty {
-  display: none;
+.card p {
+  margin: 0;
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* Bio section: light blue to emerald ombre */
+#bio {
+  background: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%);
+}
+
+#bio h2,
+#bio p {
+  color: #1f2937;
+}
+
+/* Projects section: light cyan to green ombre with dotted details box */
+#projects {
+  background: linear-gradient(135deg, #f0fdfa 0%, #f0fdf4 100%);
+}
+
+#projects h2 {
+  margin: 0 0 20px 0;
+  color: #1f2937;
+}
+
+#projects p {
+  color: #4b5563;
+}
+
+
+/* Languages section: light green to emerald ombre */
+/* Languages section */
+#languages {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.languages-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+  max-width: 720px;
+  margin: 26px auto 0;
+  padding: 0;
+}
+
+.lang-item {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(16, 185, 129, 0.12);
+  border-radius: 14px;
+  padding: 16px 14px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+}
+
+.lang-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.lang-item i {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  margin-bottom: 10px;
 }
 
 .lang-item .label {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f2937;
 }
 
-.lang-item:hover,
-.lang-item:focus-within {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 18px 40px rgba(2,6,23,0.12);
+/* C++ badge tile */
+.lang-item.no-icon {
+  padding: 18px 14px;
 }
 
-/* Contact icons */
+.lang-item.no-icon .badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.18);
+}
+
+
+/* Contact section: light teal to green ombre */
+#contact {
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+}
+
 .contact-links {
   display: flex;
   gap: 24px;
   justify-content: center;
-  padding-top: 8px;
+  padding-top: 12px;
 }
 
 .contact-link {
-  font-size: 36px;
-  color: #1f2933;
-  transition: color 180ms ease, transform 180ms ease;
+  font-size: 40px;
+  color: #10b981;
+  text-decoration: none;
+  transition: all 200ms ease;
 }
 
 .contact-link:hover {
-  color: #0ea5a4;
   transform: translateY(-4px);
+  color: #059669;
 }
 
-/* Footer: separate and grounded */
+/* Footer */
 .site-footer {
-  margin-top: 40px;
-  padding: 28px 0;
-  background: linear-gradient(180deg, #ffffff 0%, #f7faf9 100%);
-  border-top: 1px solid rgba(16,24,40,0.04);
+  margin-top: 60px;
+  padding: 40px 0;
+  background: white;
+  border-top: 1px solid #e5e7eb;
   text-align: center;
+  color: #6b7280;
 }
 
 .site-footer p {
   margin: 0;
-  color: #374151;
+  font-size: 14px;
 }
 
-/* Responsiveness: smaller screens */
-@media (max-width: 640px) {
+/* Responsive design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav {
+    gap: 16px;
+    font-size: 13px;
+  }
+
   .card {
-    margin: 20px 18px;
-    padding: 22px;
+    margin: 24px auto;
+    padding: 24px;
+  }
+
+  .card h2 {
+    font-size: 22px;
   }
 
   .languages-list {
-    gap: 10px;
+    gap: 12px;
+  }
+
+  .lang-item {
+    padding: 12px;
   }
 
   .contact-link {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
