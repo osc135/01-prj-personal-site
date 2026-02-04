@@ -5,75 +5,80 @@
   <title>My Personal Site</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-  <!-- Header section with my name -->
-  <header>
-    <h1>My Personal Website</h1>
+  <!-- Header section kept visually separate from content -->
+  <header class="site-header">
+    <div class="container">
+      <h1>My Personal Website</h1>
+    </div>
   </header>
 
-  <!-- Bio section to introduce myself -->
-  <section id="bio">
-    <h2>About Me</h2>
-    <p>Hello! My name is Olivia Campbell. I am a student at the University of Utahin majoring in Computer Science. I am trying to learn to utilize AI in my work, while still creating amazing projects.</p>
-  </section>
+  <!-- Main content: each section is a centered card/bubble -->
+  <main class="content">
+    <section id="bio" class="card card-ombre">
+      <h2>About Me</h2>
+      <p>Hello! My name is Olivia Campbell. I am a student at the University of Utah in majoring in Computer Science. I am trying to learn to utilize AI in my work, while still creating amazing projects.</p>
+    </section>
 
-  <!-- Projects section to showcase my work -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <p>This section is a work in progress. Check back later for my awesome projects!</p>
-  </section>
+    <section id="projects" class="card card-ombre-2">
+      <h2>My Projects</h2>
+      <p>This section is a work in progress. Check back later for my awesome projects!</p>
+    </section>
 
-  <!-- Languages section to talk about what I know -->
-  <section id="languages">
-    <h2>Languages I Know</h2>
-    <ul>
-      <li>
-        <i class="fab fa-html5"></i>
-        <span>HTML</span>
-      </li>
-      <li>
-        <i class="fab fa-css3-alt"></i>
-        <span>CSS</span>
-      </li>
-      <li>
-        <i class="fab fa-js-square"></i>
-        <span>JavaScript</span>
-      </li>
-      <li>
-        <i class="fab fa-python"></i>
-        <span>Python</span>
-      </li>
-      <li>
-        <i class="fab fa-csharp"></i>
-        <span>C#</span>
-      </li>
-      <li>
-        <i class="fab fa-java"></i>
-        <span>Java</span>
-      </li>
-      <li>
-        <span>C++</span>
-      </li>
-    </ul>
-  </section>
+    <section id="languages" class="card">
+      <h2>Languages I Know</h2>
+      <ul class="languages-list">
+        <li class="lang-item">
+          <i class="fab fa-html5" aria-hidden="true"></i>
+          <span class="label">HTML</span>
+        </li>
+        <li class="lang-item">
+          <i class="fab fa-css3-alt" aria-hidden="true"></i>
+          <span class="label">CSS</span>
+        </li>
+        <li class="lang-item">
+          <i class="fab fa-js-square" aria-hidden="true"></i>
+          <span class="label">JavaScript</span>
+        </li>
+        <li class="lang-item">
+          <i class="fab fa-python" aria-hidden="true"></i>
+          <span class="label">Python</span>
+        </li>
+        <li class="lang-item">
+          <i class="fab fa-csharp" aria-hidden="true"></i>
+          <span class="label">C#</span>
+        </li>
+        <li class="lang-item">
+          <i class="fab fa-java" aria-hidden="true"></i>
+          <span class="label">Java</span>
+        </li>
+        <li class="lang-item">
+          <!-- No icon for C++; we intentionally omit a filler icon -->
+          <span class="label">C++</span>
+        </li>
+      </ul>
+    </section>
 
-  <!-- Contact section for getting in touch -->
-  <section id="contact">
-    <h2>Dont be afraid to contact me!</h2>
-    <div class="contact-links">
-      <a href="mailto:olivia.susan.campbell@gmail.com" class="contact-link">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="https://github.com/osc135" class="contact-link">
-        <i class="fab fa-github"></i>
-      </a>
+    <section id="contact" class="card">
+      <h2>Don't be afraid to contact me!</h2>
+      <div class="contact-links">
+        <a href="mailto:olivia.susan.campbell@gmail.com" class="contact-link" aria-label="Email">
+          <i class="fab fa-google" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/osc135" class="contact-link" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer kept visually separate from content -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Olivia Campbell</p>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Olivia Campbell </p>
   </footer>
 
 </body>
