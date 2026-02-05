@@ -4,12 +4,12 @@
   box-sizing: border-box;
 }
 
-/* Body: soft, clean background */
+/* Body: engaging background with subtle gradient */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9fafb;
+  background: linear-gradient(135deg, #f0fdf4 0%, #f8f7ff 100%);
   color: #1f2937;
   line-height: 1.6;
 }
@@ -61,7 +61,50 @@ body {
 }
 
 .nav-link:hover {
+  color: #059669;
+  border-bottom: 2px solid #059669;
+}
+
+/* Hero Section: Bold, eye-catching introduction */
+.hero {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  margin: 0 0 32px 0;
+  opacity: 0.95;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+.hero-button {
+  display: inline-block;
+  background: white;
   color: #10b981;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 200ms ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  background: #f0fdf4;
 }
 
 
@@ -70,26 +113,27 @@ body {
   padding: 60px 0;
 }
 
-/* Card styles: clean white with subtle shadow */
+/* Card styles: clean white with vibrant shadows */
 .card {
   max-width: 800px;
   margin: 40px auto;
   padding: 40px;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
-  transition: box-shadow 200ms ease;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 10px 25px rgba(16, 185, 129, 0.08);
+  transition: all 200ms ease;
 }
 
 .card:hover {
-  box-shadow: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+  transform: translateY(-4px);
 }
 
 .card h2 {
-  margin: 0 0 20px 0;
-  font-size: 28px;
+  margin: 0 0 30px 0;
+  font-size: 32px;
   font-weight: 700;
-  color: #1f2937;
+  color: #10b981;
   text-align: center;
 }
 
@@ -104,32 +148,73 @@ body {
 /* Bio section: light blue to emerald ombre */
 #bio {
   background: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%);
+  border: 1px solid rgba(16, 185, 129, 0.1);
 }
 
-#bio h2,
+#bio h2 {
+  color: #10b981;
+}
+
 #bio p {
-  color: #1f2937;
+  color: #374151;
+  font-size: 17px;
 }
 
-/* Projects section: light cyan to green ombre with dotted details box */
+/* Projects section */
 #projects {
   background: linear-gradient(135deg, #f0fdfa 0%, #f0fdf4 100%);
+  border: 1px solid rgba(16, 185, 129, 0.1);
 }
 
 #projects h2 {
-  margin: 0 0 20px 0;
-  color: #1f2937;
+  color: #10b981;
 }
 
-#projects p {
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.project-item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  transition: all 200ms ease;
+}
+
+.project-item:hover {
+  border-color: #10b981;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
+}
+
+.project-item h3 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.project-item p {
+  margin: 0;
+  font-size: 14px;
   color: #4b5563;
+  line-height: 1.6;
 }
 
 
 /* Languages section: light green to emerald ombre */
-/* Languages section */
 #languages {
   background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+#languages h2 {
+  color: #10b981;
 }
 
 .languages-list {
@@ -154,9 +239,10 @@ body {
 }
 
 .lang-item:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+  background: white;
+  box-shadow: 0 12px 24px rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
 }
 
 .lang-item i {
@@ -200,6 +286,11 @@ body {
 /* Contact section: light teal to green ombre */
 #contact {
   background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+  border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+#contact h2 {
+  color: #10b981;
 }
 
 .contact-links {
@@ -214,10 +305,11 @@ body {
   color: #10b981;
   text-decoration: none;
   transition: all 200ms ease;
+  display: inline-block;
 }
 
 .contact-link:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.15);
   color: #059669;
 }
 
@@ -226,7 +318,7 @@ body {
   margin-top: 60px;
   padding: 40px 0;
   background: white;
-  border-top: 1px solid #e5e7eb;
+  border-top: 2px solid rgba(16, 185, 129, 0.2);
   text-align: center;
   color: #6b7280;
 }
@@ -238,6 +330,18 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
   .header-content {
     flex-direction: column;
     gap: 16px;
@@ -254,7 +358,12 @@ body {
   }
 
   .card h2 {
-    font-size: 22px;
+    font-size: 24px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .languages-list {
